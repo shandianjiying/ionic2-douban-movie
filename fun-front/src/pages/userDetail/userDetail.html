@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button (click)="goBack()">
+        <span ion-text color="primary" showWhen="ios">返回</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+      <ion-item>
+        照片
+        <img [src]="base64ImageData" *ngIf="base64ImageData" />
+      </ion-item>
+  </ion-list>
+  <button ion-button block (click)="takePicture()">拍摄</button>
+  <button ion-button block (click)="openGallery()">从相册选取</button>
+  <button ion-button block (click)="login()">登录</button>
+</ion-content>

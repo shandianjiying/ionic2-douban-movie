@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>电影列表</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <div class="list-title">正在热映</div>
+    </ion-col>
+    <ion-col text-right>
+        <div class="list-more">更多...</div>
+    </ion-col>
+  </ion-row>
+  <ion-card class="card-main" *ngFor='let item of movieList'>
+    <img src="{{item.imageUrl}}"/>
+    <p class="card-footer">{{item.name}}</p>
+  </ion-card>
+
+  <ion-row>
+    <ion-col>
+      <div class="list-title">即将上映</div>
+    </ion-col>
+    <ion-col text-right>
+        <div class="list-more">更多...</div>
+    </ion-col>
+  </ion-row>
+  <ion-card class="card-main" *ngFor='let item of comingList'>
+    <img src="{{item.imageUrl}}"/>
+    <p class="card-footer">{{item.name}}</p>
+  </ion-card>
+
+</ion-content>

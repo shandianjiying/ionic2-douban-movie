@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Description
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">关闭</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item>
+        <ion-label color="primary">用户名</ion-label>
+        <ion-input placeholder="用户名" [(ngModel)]="data.nickName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">密码</ion-label>
+        <ion-input type="password" placeholder="密码" [(ngModel)]="data.password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">密码确认</ion-label>
+        <ion-input type="password" placeholder="密码" [(ngModel)]="data.passconfirm"></ion-input>
+      </ion-item>
+  </ion-list>
+  <button ion-button (click)="register()">注册</button>
+</ion-content>
