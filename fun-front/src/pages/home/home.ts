@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { App,NavController } from 'ionic-angular';
 import { HttpService } from '../../services/HttpService';
 import { MovieDetail } from '../movieDetail/movieDetail';
+import { MovieList} from '../movieList/movieList';
 import { TabsPage } from '../../pages/tabs/tabs';
 
 @Component({
@@ -31,7 +32,6 @@ export class HomePage {
           this.comingList.push(item)
         })
       }
-      console.log(this.movieList)
     }, (err) => {
       console.log(err);
     })
@@ -39,13 +39,14 @@ export class HomePage {
 
   moreInTheater(){
     let nav = this.app.getRootNav();
-    nav.push(MovieDetail);
+    nav.push(MovieList);
     // this.navCtrl.push(MovieDetail);
     
   }
 
   moreComing(){
-    this.navCtrl.push(MovieDetail);
+    let nav = this.app.getRootNav();
+    nav.push(MovieList);
   }
 
 }

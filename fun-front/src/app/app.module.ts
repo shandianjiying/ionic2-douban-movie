@@ -11,6 +11,7 @@ import { UserDetail } from '../pages/userDetail/userDetail';
 import { ConfigService } from '../services/ConfigService';
 import { GlobalVarsService } from '../services/GlobalVarService';
 import { MovieDetail } from '../pages/movieDetail/movieDetail';
+import { MovieList } from '../pages/movieList/movieList';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MovieDetail } from '../pages/movieDetail/movieDetail';
     Login,
     Register,
     UserDetail,
-    MovieDetail
+    MovieDetail,
+    MovieList
     // ConfigService
     // HttpService
   ],
@@ -39,7 +41,8 @@ import { MovieDetail } from '../pages/movieDetail/movieDetail';
     Login,
     Register,
     UserDetail,
-    MovieDetail
+    MovieDetail,
+    MovieList
   ],
   providers: [ConfigService,GlobalVarsService]
 })
