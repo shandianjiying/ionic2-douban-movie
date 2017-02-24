@@ -10,6 +10,7 @@ import { Register } from '../pages/modals/register/register';
 import { UserDetail } from '../pages/userDetail/userDetail';
 import { ConfigService } from '../services/ConfigService';
 import { GlobalVarsService } from '../services/GlobalVarService';
+import { MovieDetail } from '../pages/movieDetail/movieDetail';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GlobalVarsService } from '../services/GlobalVarService';
     TabsPage,
     Login,
     Register,
-    UserDetail
+    UserDetail,
+    MovieDetail
     // ConfigService
     // HttpService
   ],
@@ -36,7 +38,8 @@ import { GlobalVarsService } from '../services/GlobalVarService';
     TabsPage,
     Login,
     Register,
-    UserDetail
+    UserDetail,
+    MovieDetail
   ],
   providers: [ConfigService,GlobalVarsService]
 })

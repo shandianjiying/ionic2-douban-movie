@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { App,NavController } from 'ionic-angular';
 import { HttpService } from '../../services/HttpService';
+import { MovieDetail } from '../movieDetail/movieDetail';
+import { TabsPage } from '../../pages/tabs/tabs';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +13,7 @@ import { HttpService } from '../../services/HttpService';
 export class HomePage {
   private movieList: any;
   private comingList: any;
-  constructor(public navCtrl: NavController, private httpService: HttpService) {
+  constructor(public navCtrl: NavController, private httpService: HttpService,private app:App) {
     this.movieList = [];
     this.comingList = [];
   }
@@ -33,6 +35,17 @@ export class HomePage {
     }, (err) => {
       console.log(err);
     })
+  }
+
+  moreInTheater(){
+    let nav = this.app.getRootNav();
+    nav.push(MovieDetail);
+    // this.navCtrl.push(MovieDetail);
+    
+  }
+
+  moreComing(){
+    this.navCtrl.push(MovieDetail);
   }
 
 }
