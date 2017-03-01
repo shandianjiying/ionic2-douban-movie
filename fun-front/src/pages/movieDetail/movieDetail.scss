@@ -1,0 +1,59 @@
+movie-detail{
+    
+    .head-main {
+        height: 250px;
+        width:100%;
+        position: relative;
+        pointer-events: none;
+        .head-tool {
+            height: 40px;
+            width:100%;
+            position:absolute;
+            pointer-events: auto;
+        }
+        .back-btn {
+            width:20%;
+            height:45px;
+            .icon-itself{
+                font-size: 2.8em;
+                padding: 2px 0 0 10%;
+            }
+        }
+        .img-head-div {
+            position:absolute;
+            width:120px;
+            height: 150px;
+            border: 2px solid white;
+            border-radius: 5px;
+            left:8%;
+            top:55px;
+            .img-head {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .title-div {
+            position: absolute;
+            left: 45%;
+            top: 80px;
+            color: white;
+        }
+    }
+    .movie-desc {
+        height: 250px;
+        width: 100%;
+        
+    }
+    .img-cls {
+        width: 100%;
+        height: 100%;
+        // filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    
+        // -webkit-filter: blur(10px); /* Chrome, Opera */
+        // -moz-filter: blur(10px);
+        //     -ms-filter: blur(10px);    
+        filter: blur(10px);
+        
+        
+    }
+}

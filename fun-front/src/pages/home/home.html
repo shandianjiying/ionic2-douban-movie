@@ -13,7 +13,7 @@
         <div class="list-more" (click)="moreInTheater()">更多...</div>
     </ion-col>
   </ion-row>
-  <ion-card class="card-main" *ngFor='let item of movieList'>
+  <ion-card class="card-main" *ngFor='let item of movieList' (click)="movieDetail(item)">
     <img src="{{item.imageUrl}}"/>
     <p class="card-footer">{{item.name}}</p>
   </ion-card>
@@ -26,7 +26,7 @@
         <div class="list-more" (click)="moreComing()">更多...</div>
     </ion-col>
   </ion-row>
-  <ion-card class="card-main" *ngFor='let item of comingList'>
+  <ion-card class="card-main" *ngFor='let item of comingList' (click)="movieDetail(item)">
     <img src="{{item.imageUrl}}"/>
     <p class="card-footer">{{item.name}}</p>
   </ion-card>

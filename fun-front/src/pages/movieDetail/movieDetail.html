@@ -1,18 +1,31 @@
 
-
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons start>
-      <button ion-button (click)="goBack()">
-        <span ion-text color="primary" showWhen="ios">返回</span>
-        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-title>电影</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-
 <ion-content>
-  
+  <div class="head-main">
+    <div class="head-tool">
+      <div class="back-btn" (click)="goBack()">
+        <ion-icon class="icon-itself" name="ios-arrow-dropleft-circle"></ion-icon>
+      </div>
+      
+    </div>
+    <img class="img-cls" src="{{movie.imageUrl}}">
+    <div class="row">
+      <div class="img-head-div">
+        <img class="img-head" src="{{movie.imageUrl}}">
+      </div>
+      <div class="title-div">
+        <h3>{{movie.name}}</h3>
+        <p style="font-size:12px;">{{fetchData.original_title}}</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="movie-desc">
+    <span ng-repeat="genre in movie.genres">
+        {{genre}}
+        <p ng-if="$index != movie.genres.length-1">|</p>
+    </span>
+    <br/>
+
+  </div>
 </ion-content>

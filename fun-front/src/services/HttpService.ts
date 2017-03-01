@@ -47,6 +47,14 @@ export class HttpService {
         ).catch(this.handleError)
     }
 
+    getPhotos(id,page,count){
+        // let url = 'http://api.douban.com/v2/movie/subject/'+id+'/photos?start='+page+'&count='+count;
+        let url = 'http://api.douban.com/v2/movie/subject/'+id;
+        return this.http.get(url).map(
+            res=>res.json()
+        ).catch(this.handleError)
+    }
+
     private handleError(error: Response) {
         console.log(error);
         return Observable.throw(error.json().error || 'Server Error');

@@ -40,8 +40,6 @@ export class HomePage {
   moreInTheater(){
     let nav = this.app.getRootNav();
     nav.push(MovieList);
-    // this.navCtrl.push(MovieDetail);
-    
   }
 
   moreComing(){
@@ -49,4 +47,8 @@ export class HomePage {
     nav.push(MovieList);
   }
 
+  movieDetail(item){
+    let nav = this.app.getRootNav();
+    nav.push(MovieDetail,item);
+  }
 }
