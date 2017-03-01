@@ -29,7 +29,9 @@ import { MovieList } from '../pages/movieList/movieList';
     // HttpService
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      mode:'md'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
