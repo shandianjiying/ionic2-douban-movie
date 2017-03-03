@@ -21,11 +21,12 @@
   </div>
 
   <div class="movie-desc">
-    <span ng-repeat="genre in movie.genres">
-        {{genre}}
-        <p ng-if="$index != movie.genres.length-1">|</p>
-    </span>
-    <br/>
-
+    <div class="desc-content">
+      <span>
+          {{movie.year}}/{{movie.genres}}
+      </span>
+      <br/>
+    </div>
+    
   </div>
 </ion-content>

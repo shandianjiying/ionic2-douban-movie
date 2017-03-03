@@ -24,9 +24,15 @@ export class MovieDetail {
     let id = this.params.data.doubanId;
     //获取海报（暂时没有此接口，现在调用的是获取电影条目数据）
     this.httpService.getPhotos(id,0,10).subscribe((data)=>{
+      console.log(data)
       this.fetchData.original_title = data.original_title;
       this.fetchData.summary = data.summary;
+      console.log(this.movie)
     })
+  }
+
+  ionViewDidLoad(){
+    
   }
 
 }

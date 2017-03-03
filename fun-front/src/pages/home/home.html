@@ -10,7 +10,7 @@
       <div class="list-title">正在热映</div>
     </ion-col>
     <ion-col text-right>
-        <div class="list-more" (click)="moreInTheater()">更多...</div>
+        <div class="list-more" tappable (click)="moreInTheater()">更多...</div>
     </ion-col>
   </ion-row>
   <ion-card class="card-main" *ngFor='let item of movieList' tappable (click)="movieDetail(item)">
@@ -23,7 +23,7 @@
       <div class="list-title">即将上映</div>
     </ion-col>
     <ion-col text-right>
-        <div class="list-more" (click)="moreComing()">更多...</div>
+        <div class="list-more" tappable (click)="moreComing()">更多...</div>
     </ion-col>
   </ion-row>
   <ion-card class="card-main" *ngFor='let item of comingList' tappable (click)="movieDetail(item)">

@@ -42,7 +42,9 @@ movie-detail{
     .movie-desc {
         height: 250px;
         width: 100%;
-        
+        .desc-content {
+            padding:10px 10px;
+        }
     }
     .img-cls {
         width: 100%;
