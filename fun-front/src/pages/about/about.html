@@ -1,11 +1,22 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      找影院
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<!--<ion-content padding class="container">-->
-  <div #container id="container" class="mapContainer"></div>
-<!--</ion-content>-->
+<ion-content>
+  <ion-fab center bottom *ngIf="showIonFab">
+    <button ion-fab>去这里</button>
+    <ion-fab-list side="left">
+      <button ion-fab color="danger" (click)="mapNavigation(1)">驾车</button>
+    </ion-fab-list>
+    <ion-fab-list side="right">
+      <button ion-fab color="dark" (click)="mapNavigation(2)"> 公交</button>
+    </ion-fab-list>
+    <ion-fab-list side="top">
+      <button ion-fab color="secondary" (click)="mapNavigation(3)">步行</button>
+    </ion-fab-list>
+  </ion-fab>
+  <div *ngIf="mapIsComplete">
+    <ion-searchbar class="searchBar" mode="ios" (ionFocus)="ionFocus()" placeholder="搜索"></ion-searchbar>
+  </div>
+  <div *ngIf="mapIsComplete&&!isPositioning">
+    <ion-icon name="radio-button-on" class="position-btn" (click)="mapLocation()"></ion-icon>
+  </div>
+  <div #map_container class="map_container"></div>
+</ion-content>

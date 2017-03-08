@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      搜索地点
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span showWhen="ios">关闭</span>
+        <ion-icon name="close" hideWhen="ios"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar #searchBar
+                 mode="ios"
+                 animated
+                 placeholder="搜索"
+                 debounce="500"
+                 (ngModel)="searchVal"
+                 (ionInput)="getItemss($event)">
+  </ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="selectItem(item)">
+      {{ item.name }}<br/>
+      <span *ngFor="let add of item.address.split(';')">
+        <span class="address">{{add}}</span>
+      </span>
+    </ion-item>
+    <button *ngIf="items.length>0" ion-button full clear (click)="clearHistory()">清空搜索历史</button>
+  </ion-list>
+</ion-content>
