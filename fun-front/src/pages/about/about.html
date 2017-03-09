@@ -1,6 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      找影院
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content>
-  <ion-fab center bottom *ngIf="showIonFab">
+  <div *ngIf="showIonFab">
+  <ion-fab center bottom >
     <button ion-fab>去这里</button>
     <ion-fab-list side="left">
       <button ion-fab color="danger" (click)="mapNavigation(1)">驾车</button>
@@ -12,6 +20,7 @@
       <button ion-fab color="secondary" (click)="mapNavigation(3)">步行</button>
     </ion-fab-list>
   </ion-fab>
+  </div>
   <div *ngIf="mapIsComplete">
     <ion-searchbar class="searchBar" mode="ios" (ionFocus)="ionFocus()" placeholder="搜索"></ion-searchbar>
   </div>

@@ -27,7 +27,7 @@ export class LocationNavPage {
   }
 
   ngOnInit() {
-    let type = this.navigationType, options = {city: '广州市', panel: this.panel.nativeElement, map: this.map};
+    let type = this.navigationType, options = {city: '上海市', panel: this.panel.nativeElement, map: this.map};
     if (type === 1) {
       AMap.service('AMap.Driving', () => {
         this.doSearch(type, new AMap.Driving(options));

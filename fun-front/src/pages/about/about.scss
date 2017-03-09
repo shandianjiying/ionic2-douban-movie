@@ -8,12 +8,17 @@ page-about {
     top: 0;
     left: 0;
     z-index: 1;
+    // padding-top: 20px;
+    padding: 5px 8px !important;
+  }
+  .searchBar {
+      padding-bottom: 5px;
   }
   .position-btn {
     position: absolute;
     left: 5px;
     bottom: 50px;
-    z-index: 1;
+    z-index: 9999;
     font-size: 22px;
     padding: 3px 5px 0 5px;
     background-color: #fff;
@@ -21,4 +26,9 @@ page-about {
     border-radius: 3px;
     color: #666;
   }
+
+  .platform-ios.platform-cordova .searchBar{
+    top:20px;
+  }
+
 }

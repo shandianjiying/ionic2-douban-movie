@@ -85,6 +85,7 @@ export class AboutPage {
   }
 
   mapLocation() {
+    debugger
     let that = this;
     that.isPositioning = true;
     that.nativeService.getUserLocation().then(position => {
